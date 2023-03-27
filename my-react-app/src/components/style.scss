@@ -1,0 +1,34 @@
+body{
+    
+}
+.container{   
+    background-color: var(--cream); 
+    width: 80vw;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+
+    .balance{
+        background-color: var(--softRed);
+        height: 10vh;
+        width: 25vw;
+        margin: 0 auto;
+        margin-top: 15vh;
+        border-radius: 2vh;
+        padding: 1vh;
+        color: white;
+    }
+
+    .lastSevenDays{
+        background-color: white;
+        height: 40vh;
+        width: 25vw;
+        margin: 0 auto;
+        margin-top: 2vh;
+        padding: 1vh;
+        border-radius: 2vh;
+        color: black;
+    }
+}
