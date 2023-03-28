@@ -1,8 +1,5 @@
-body{
-    
-}
-.container{   
-    background-color: var(--cream); 
+.container {
+    background-color: var(--cream);
     width: 80vw;
     height: 90vh;
     margin: 0 auto;
@@ -10,25 +7,98 @@ body{
     flex-direction: column;
     margin-top: 5vh;
 
-    .balance{
+    .balanceContainer {
         background-color: var(--softRed);
         height: 10vh;
         width: 25vw;
         margin: 0 auto;
         margin-top: 15vh;
         border-radius: 2vh;
-        padding: 1vh;
+        padding: 3vh;
         color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .myBalance {
+            font-size: 15px;
+        }
+
+        .value {
+            font-size: 25px;
+            margin-top: 1vh;
+            font-weight: 400;
+        }
+
+        img {
+            height: 40px;
+            align-self: flex-end;
+            margin-top: -6vh;
+        }
     }
 
-    .lastSevenDays{
+    .lastSevenDays {
         background-color: white;
-        height: 40vh;
+        height: 45vh;
         width: 25vw;
         margin: 0 auto;
         margin-top: 2vh;
-        padding: 1vh;
+        padding: 3vh;
         border-radius: 2vh;
-        color: black;
+        color: var(--darkBrown);
+
+        .title {}
+
+        .graphic {
+            height: 25vh;
+            width: auto;
+            border-bottom: 1px solid var(--cream);
+            padding: 1vh;
+        }
+
+        .totalMonth {
+            padding: 1vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .leftContainer{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 2vh;
+
+                .thisMonth{
+                    font-size: 15px;
+                    opacity: 0.7;
+                }
+                .value{
+                    margin-top: 1vh;
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+            }
+
+            .rightContainer{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .percentage{
+                    margin-top: 4vh;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+
+                .montLast{
+                    font-size: 15px;
+                    opacity: 0.7;
+                }
+            }
+        }
     }
 }
