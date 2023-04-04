@@ -1,6 +1,7 @@
 import React from 'react'
 import "./style.scss"
 import logo from "../assets/logo.svg"
+import { Chart } from './Chart/Chart'
 
 export const Home = () => {
   return (
@@ -14,8 +15,10 @@ export const Home = () => {
 
       <div className='lastSevenDays'>
 
-        <h3 className='title'>Spending - Last 7 days</h3>
-        <div className='graphic'></div>
+        <span className='title'>Spending - Last 7 days</span>
+        <div className='graphic'>
+          <Chart />
+        </div>
 
         <div className='totalMonth'>
           <div className='leftContainer'>
