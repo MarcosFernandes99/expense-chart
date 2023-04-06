@@ -1,7 +1,10 @@
+import { Colors } from 'chart.js'
 import React from 'react'
 import ApexCharts from 'react-apexcharts'
 
-export const Chart = () => {
+export const ChartApex = () => {
+
+    const today = new Date().getDay()
 
     const series = [{
         name: 'Despesas',
@@ -15,10 +18,9 @@ export const Chart = () => {
                 borderRadius: 5,
                 dataLabels: {
                     position: 'top',
-                },
-                
-            }
-        },
+                },                
+            },
+        },        
         dataLabels: {
             enabled: false,
             // formatter: function (val: any) {
@@ -44,7 +46,7 @@ export const Chart = () => {
                 show: false,
                 formatter: function (val: any) {
                     return "$" + val;
-                  }
+                }
             },
         },
         tooltip: {
@@ -53,14 +55,25 @@ export const Chart = () => {
         grid: {
             show: false
         },
-        colors: ['#EC765F'],
-
+        colors: ['#EC765F', '#EC765F', '#EC765F', '#EC765F', '#EC765F', '#EC765F', '#EC765F'],
+        // responsive: [
+        //     {
+        //         breakpoint: 415,
+        //         options: {
+        //             chart: {
+        //                 height: 220,
+        //                 width: 240
+        //             }
+        //         },
+        //     }
+        // ]
     }
 
 
 
     return (
-        <ApexCharts options={options} series={series} type='bar' height={180} />
-
+        <ApexCharts key={today} options={options} series={series} type='bar' height={180} />
     )
 }
+
+
